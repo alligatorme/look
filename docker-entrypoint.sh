@@ -1,0 +1,1 @@
+/code/manage.py migrate
