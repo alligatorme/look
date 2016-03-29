@@ -18,9 +18,9 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^([0-9]{15})/([a-zA-Z0-9|\.\s\-]+)$', 'look.views.brief_engaged'),
-    url(r'^([0-9a-z]{40})/([0-9]{13})/([0-9|\.\-]+)$', 'look.views.detail_engaged'),
-    url(r'^@([0-9]{15})/([0-9]{13})/([0-9]{13})$', 'look.views.location_engaged'),
+    url(r'^([0-9]{15})/([a-zA-Z0-9|\.\s\-]+)$', look.views.brief_engaged),
+    url(r'^([0-9a-z]{40})/([0-9]{13})/([0-9|\.\-]+)$', look.views.detail_engaged),
+    url(r'^@([0-9]{15})/([0-9]{13})/([0-9]{13})$', look.views.location_engaged),
     # url(r'^@([0-9]{15})$', 'look.views.location_engaged'),
-    url(r'^@$', 'look.views.device_list')
+    url(r'^@$', look.views.device_list)
 ]
