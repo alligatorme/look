@@ -7,7 +7,7 @@ from .models import detail,brief
 import time,hashlib
 
 KEEP_PERIOD=30*24*60*60*1000
-MODIFY=False
+MODIFY=True
  
 def brief_engaged(request,a,b):
 	brf=get_unique(brief, imay=a)
