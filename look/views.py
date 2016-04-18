@@ -83,6 +83,7 @@ def command_engaged(request,a,c):
 	brf=get_unique(brief,imay=a)
 	brf.comd=c
 	brf.save()
+	return HttpResponse('Command Cached')
 	
 def valid_t(t):
 	tmp=abs(int(t)-int(time.time()*1000))
