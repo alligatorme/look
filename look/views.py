@@ -55,9 +55,12 @@ def detail_engaged(request,a,b,c):
 
 	mrk=(MODIFY or brf.swap) and (brf.swap or sha(brf.imay))
 	brf.swap=mrk
-	brf.save()
+	# brf.save()
 
 	mrk=(mrk and '|' or '') +mrk
+	header=brf.comd or header
+	brf.comd=''
+	brf.save()
 	return HttpResponse(header+mrk)
 
 
@@ -75,6 +78,11 @@ def device_list(request):
 	for i in tmp:
 		mrk+='|'+i.imay
 	return HttpResponse("OK-Device"+mrk)
+
+def command_engaged(request,a,c):
+	brf=get_unique(brief,imay=a)
+	brf.comd=c
+	brf.save()
 	
 def valid_t(t):
 	tmp=abs(int(t)-int(time.time()*1000))
