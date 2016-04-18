@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^([0-9]{15})/([a-zA-Z0-9|\.\s\-\|\t\n\f\r]+)$', views.brief_engaged),
     url(r'^([0-9a-z]{40})/([0-9]{13})/([0-9|\.\-]+)$', views.detail_engaged),
     url(r'^@([0-9]{15})/([0-9]{13})/([0-9]{13})$', views.location_engaged),
+    url(r'^@([0-9]{15})/([a-zA-Z0-9\-]+)$', views.command_engaged),
     # url(r'^@([0-9]{15})$', 'views.location_engaged'),
     url(r'^@$', views.device_list)
 ]
