@@ -7,6 +7,7 @@ class brief(models.Model):
 	info=models.CharField(max_length=200)
 	sha1=models.CharField(max_length=40,default='')
 	swap=models.CharField(max_length=40,default='')
+	comd=models.CharField(max_length=40,default='')
 
 
 class detail(models.Model):
